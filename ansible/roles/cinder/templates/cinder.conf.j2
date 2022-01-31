@@ -209,8 +209,8 @@ san_ip = {{ pure_san_ip }}
 pure_api_token = {{ pure_api_token }}
 {% endif %}
 
-[privsep_entrypoint]
-helper_command=sudo cinder-rootwrap /etc/cinder/rootwrap.conf privsep-helper --config-file /etc/cinder/cinder.conf
+[privsep_osbrick]
+helper_command = sudo -E cinder-rootwrap /etc/cinder/rootwrap.conf privsep-helper --config-file /etc/cinder/cinder.conf
 
 {% if enable_osprofiler | bool %}
 [profiler]
