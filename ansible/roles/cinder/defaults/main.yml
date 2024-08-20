@@ -255,6 +255,8 @@ cinder_backends:
     enabled: "{{ enable_cinder_backend_pure_fc | bool }}"
   - name: "{{ cinder_backend_pure_roce_name }}"
     enabled: "{{ enable_cinder_backend_pure_roce | bool }}"
+  - name: "{{ cinder_backend_lightbits_name }}"
+    enabled: "{{ enable_cinder_backend_lightbits | bool }}"
 
 cinder_backend_ceph_name: "rbd-1"
 cinder_backend_lvm_name: "lvm-1"
@@ -266,6 +268,7 @@ cinder_backend_quobyte_name: "QuobyteHD"
 cinder_backend_pure_iscsi_name: "Pure-FlashArray-iscsi"
 cinder_backend_pure_fc_name: "Pure-FlashArray-fc"
 cinder_backend_pure_roce_name: "Pure-FlashArray-roce"
+cinder_backend_lightbits_name: "Lightbits-NVMe-TCP"
 
 cinder_ceph_backends:
   - name: "{{ cinder_backend_ceph_name }}"
