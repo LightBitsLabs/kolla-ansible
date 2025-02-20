@@ -255,6 +255,7 @@ verify_ssl_path = {{ openstack_cacert }}
 {% if service_name.startswith("nova-compute") and enable_cells | bool %}
 [workarounds]
 disable_group_policy_check_upcall = true
+disable_deep_image_inspection = true
 
 [filter_scheduler]
 # When in superconductor mode, nova-compute can't send instance
